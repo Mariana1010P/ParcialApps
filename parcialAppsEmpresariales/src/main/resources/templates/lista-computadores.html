@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista Computadores</title>
+</head>
+<body>
+    <h1> Lista Computadores</h1>
+    <table>
+		<tr>
+			<th>ID</th>
+			<th>Marca</th>
+			<th>Modelo</th>
+			<th>RAM</th>
+			<th>Procesador</th>
+			<th>Sistema operativo</th>
+			<th>Duración de la bateria</th>
+			<th>Precio</th>
+			<th>Meses de garantia</th>
+		</tr>
+		<tr th:each="computador : ${computadores}">
+			<td th:text = "${computador.id}"></td>
+			<td th:text = "${computador.marca}"></td>
+			<td th:text = "${computador.modelo}"></td>
+			<td th:text = "${computador.ram}"></td>
+			<td th:text = "${computador.procesador}"></td>
+			<td th:text = "${computador.sistemaOperativo}"></td>
+			<td th:text = "${computador.duracionBateria}"></td>
+			<td th:text = "${computador.precio}"></td>
+			<td th:text = "${computador.mesesGarantia}"></td>
+		</tr>
+	</table>
+</body>
+</html>
